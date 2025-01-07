@@ -21,9 +21,14 @@
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="timer.c" />
+    <ClCompile Include="udp.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="timer.h" />
+    <ClInclude Include="udp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Rnks_Beleg_2025.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

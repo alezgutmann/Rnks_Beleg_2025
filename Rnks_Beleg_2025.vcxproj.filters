@@ -21,10 +21,21 @@
     <ClCompile Include="timer.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="udp.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="timer.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="udp.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Rnks_Beleg_2025.rc">
+      <Filter>Ressourcendateien</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

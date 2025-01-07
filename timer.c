@@ -137,6 +137,24 @@ int zeit_abgelaufen(int nr) {
 
 }
 
+
+void timer_showcase() {
+	for (int i = 1; i < 8; i++) {
+		timer_add(i, i);
+	}
+	timer_del(6);
+	for (int i = 0; i < 1000000000; i++);//warten um zeit zu vertreiben
+	timer_display();
+	//provozieren von Fehlermeldungen
+	timer_add(1, 1);
+	timer_del(60);
+	//showcase von timer_check()
+	for (int i = 1; i < 8; i++) {
+		if (timer_check(i))
+			printf("Timer Nr: %d ist abgelaufen :) \n", i);
+	}
+}
+
 long m_secs_now() { // gibt Millissekunden zurück
 	static LARGE_INTEGER s_frequency;
 	static BOOL s_use_qpc;
@@ -150,6 +168,7 @@ long m_secs_now() { // gibt Millissekunden zurück
 		return GetTickCount();
 	}
 }
+
 
 
 

@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <Windows.h>
+#include <winsock.h>
 #include "timer.h"
+#include "udp.h"
 
 #define mc_address 123456
 #define MAX_MC_RECEIVER 3
 
 
 void test() {//random funktion um durch printf festzustellen und auszugeben, ob andere funktionen funktionieren
-	printf("Millisekunden: %ld\n", m_secs_now());
+	
 }
 
 
@@ -27,17 +29,28 @@ int dau_jn() {//returns non zero wenn korrekte eingabe, als antwort auf Ja-Nein 
 
 int connection_prepare(int mcadd) {
 	
-	};
+};
 
 int send_hello(int mcadd) {
-	int i = 0;
+	int i = 1;
 	int hello_ack_received = 0; //muss später noch durch logik auf true gesetzt werden
 	printf("MC-Adresse: %d\n", mcadd);
+	
 	connection_prepare(mcadd);
-	while (i < MAX_MC_RECEIVER) {
+	
+	while (i <= MAX_MC_RECEIVER) {
+		timer_add(2, 2);
 		printf("Warten...\t%d/%d\n", i, MAX_MC_RECEIVER);
+
+
+		//hier noch iwie warten, dass jmd antwortet und seine unicast adresse speichern
+
+
+		while (!timer_check(2));//wartet solange bis 2-sekunden-timer abläuft
 		i++;
+		timer_del(2);
 	}
+
 	if (hello_ack_received) {
 
 	}
@@ -56,7 +69,7 @@ void idle() {
 
 void zustandsdiagramm_sender() {
 	while (1) {
-		//idle();
+		idle();
 		test();
 		if (send_hello(mc_address))
 			;
@@ -65,25 +78,9 @@ void zustandsdiagramm_sender() {
 	
 }
 
-void test_timer() {
-	for (int i = 1; i < 8; i++) {
-		timer_add(i, i );
-	}
-	timer_del(6);
-	for (int i = 0; i < 1000000000; i++);//warten um zeit zu vertreiben
-	timer_display();
-	//provozieren von Fehlermeldungen
-	timer_add(1, 1);
-	timer_del(60);
-	//showcase von timer_check()
-	for (int i = 1; i < 8; i++) {
-		if (timer_check(i))
-			printf("Timer Nr: %d ist abgelaufen :) \n", i);
-	}
-}
 
 void main() {
 	printf("Textausgabe !\n");
-	test_timer();
-	//zustandsdiagramm_sender();
+	//timer_showcase();
+	zustandsdiagramm_sender();
 }
