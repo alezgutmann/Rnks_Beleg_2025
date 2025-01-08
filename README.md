@@ -4,6 +4,7 @@ Ihr könnt das Ding hier einfach mit Visual Studio Code klonen und darüber comm
 
 !!! Zum testen müsst ihr auf euren Rechnern erst per
 >ipconfig
+
 herausfinden, welche "Temporäre IPv6-Adresse" ihr habt und die müsst ihr dann eingeben in das #define statement.
 Somit kann die Verbindung richtig aufgebaut werden. 
 
