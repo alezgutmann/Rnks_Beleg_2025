@@ -1,6 +1,8 @@
 # Rnks_Beleg_2025
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+
 Nehmt NUR die Inhalte des Ordners Rnks_Beleg, der Rest funktioniert nicht, weiß aber auch nicht wie ich ihn löschen kann >:(
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Ladet euch einfach den Ordner runter und dann wieder hoch, nachdem ihr ihn bearbeitet habt.
