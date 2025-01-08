@@ -1,5 +1,8 @@
 # Rnks_Beleg_2025
-Das hier ist das richtige repository (das andere ist ein hater).
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+Nehmt NUR die Inhalte des Ordners Rnks_Beleg, der Rest funktioniert nicht, weiß aber auch nicht wie ich ihn löschen kann >:(
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 Ladet euch einfach den Ordner runter und dann wieder hoch, nachdem ihr ihn bearbeitet habt.
 Wenn jemand ganz lieb ist kann er die 'sender2' und 'client2' in 'server' (hab ausversehen falsch bennnt upsi) und 'client' umbenennen, hatte das jz noch nicht gemacht, aus angst dass es das ganze visual studio zerschießt.
 !!! Zum testen müsst ihr auf euren Rechnern erst per
