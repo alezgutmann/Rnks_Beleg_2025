@@ -8,4 +8,7 @@ Ihr könnt das Ding hier einfach mit Visual Studio Code klonen und darüber comm
 >
 
 
+https://learn.microsoft.com/de-de/windows/win32/api/winsock2/nf-winsock2-socket
+-> benötigen wir sock_stream oder sock_raw ?
+
 * nicht vergessen: Logik soll im ersten Paket Ticks-To-Go finden und dann alle 300ms einen Tick dekrementieren...siehe Hinweisfolien
