@@ -18,3 +18,4 @@ https://learn.microsoft.com/de-de/windows/win32/api/winsock2/nf-winsock2-socket
 
 * nicht vergessen: Logik soll im ersten Paket Ticks-To-Go finden und dann alle 300ms einen Tick dekrementieren...siehe Hinweisfolien
 * TODO: parameter über kommandozeile übernehmen, aber das erst mal aussen vor, erst prüfen, dass es korrekt funktioniert, danach erst kommandozeileneingabe implementieren
+* TODO: eventuell noch datenlänge von 1kb auf tatsächliche ipv6 länge oder sonstige spezifikation anpassen
