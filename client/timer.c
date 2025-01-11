@@ -52,9 +52,9 @@ void timer_display() {
 
 void timer_add(int nr, int dauer) {
 	struct TIMER* tmp;
-	
+
 	int error = 0;
-	
+
 	current = head;
 	while (current->next != 0) {
 		if (current->nr == nr) {
@@ -78,7 +78,7 @@ void timer_add(int nr, int dauer) {
 
 void timer_del(int nr) {
 	current = head;
-	
+
 	struct TIMER* prev = head; //temporärer Timer um einen Timer vor dem zu löschenden zu erhalten
 	current = current->next;//eins vorspulen, falls dann schon richtiger Timer gefunden wird while schleife gar nicht betreten
 
@@ -86,7 +86,7 @@ void timer_del(int nr) {
 		current = current->next; //geht alle Timer durch, solange bis richtige nr gefunden
 		prev = prev->next; //läuft immer eins hinterher
 	}
-		
+
 
 	if (current->nr == nr)
 	{
@@ -114,7 +114,7 @@ long zeit_gelaufen(int nr) {// gibt die zeit, die ein Timer schon existiert in M
 		printf("\n\n-----------------------\nTimer mit Nr: %d existiert nicht ! -> DAP !\n-----------------------\n\n", nr);
 		return 0;
 	}
-	
+
 }
 
 int zeit_abgelaufen(int nr) {
@@ -123,7 +123,7 @@ int zeit_abgelaufen(int nr) {
 		current = current->next; //geht alle Timer durch, solange bis richtige nr gefunden
 	}
 
-	if (current->nr != nr){
+	if (current->nr != nr) {
 		printf("\n\n-----------------------\nTimer mit Nr: %d existiert nicht ! -> DAP !\n-----------------------\n\n", nr);
 	}
 
