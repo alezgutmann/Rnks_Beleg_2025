@@ -1,4 +1,0 @@
-﻿  client2.c
-E:\Uni-Zeug\Rnks\client2\client2.c(53,27): warning C4267: "Funktion": Konvertierung von "size_t" nach "int", Datenverlust möglich
-E:\Uni-Zeug\Rnks\client2\client2.c(68,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  client2.vcxproj -> E:\Uni-Zeug\Rnks\client2\x64\Debug\client2.exe
