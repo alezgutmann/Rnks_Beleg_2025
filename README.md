@@ -1,29 +1,8 @@
 # Rnks_Beleg_2025
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-
-Nehmt NUR die Inhalte des Ordners Rnks_Beleg, der Rest funktioniert nicht, weiß aber auch nicht wie ich ihn löschen kann >:(
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-Ladet euch einfach den Ordner runter und dann wieder hoch, nachdem ihr ihn bearbeitet habt.
-Wenn jemand ganz lieb ist kann er die 'sender2' und 'client2' in 'server' (hab ausversehen falsch bennnt upsi) und 'client' umbenennen, hatte das jz noch nicht gemacht, aus angst dass es das ganze visual studio zerschießt.
-
-
-
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Zum testen müsst ihr auf euren Rechnern erst per
->ipconfig
-
-herausfinden, welche "Temporäre IPv6-Adresse" ihr habt und die müsst ihr dann eingeben in das #define statement.
-Somit kann die Verbindung richtig aufgebaut werden. 
-
-
-
-> falls ihr "timeval" in ihren Folien seht: das ist vermutlich ihre art, um timer structs zu benennen (bei uns: TIMER), iwie ist timeval nämlich in linux, aber wir sind ja auf windows
-
-https://learn.microsoft.com/de-de/windows/win32/api/winsock2/nf-winsock2-socket
--> benötigen wir sock_stream oder sock_raw ?
-
-* nicht vergessen: Logik soll im ersten Paket Ticks-To-Go finden und dann alle 300ms einen Tick dekrementieren...siehe Hinweisfolien
-* TODO: parameter über kommandozeile übernehmen, aber das erst mal aussen vor, erst prüfen, dass es korrekt funktioniert, danach erst kommandozeileneingabe implementieren
-* TODO: eventuell noch datenlänge von 1kb auf tatsächliche ipv6 länge oder sonstige spezifikation anpassen
+Den Code verstehen:
+* WICHTIG: die eingabe.txt darf nicht mehr zeilen besitzen als 2 * MAXWINDOWSIZE
+* wir haben in spezifikationen.h quasi "codes" für helloACK, NACK und CloseACK festgelegt, die sind auf server- und client-seite gleich und werden genutzt um per strcmp() (stringcompare) herauszufinden, ob es sich um ein ACK handelt
+* der TIMEOUT für receiving auf client seite ist statt 3 * TIMEOUT_INT (timeout intervall) nun 5 * TIMEOUT_INT, da bei nur 3 * schneller receioved wurde, als die Programmlogik des Servers ist
+* das Empfangsfenster auf clientseite wird durch buffer_write() inkrementiert bzw gesteuert bzw zum ersten noch nicht empfangenen Paket gesetzt, dieses wird durch die Sequenznummer SN ermittelt
+* Begriffe Clientseite: base - ist die SN, die als nächstes erwartet wird; SN ist die aktuell erhaltene SN, wird initialisiert mit 1; identifier - quasi Unicast Adressen, da sich zwei Clients auf die selbe Socket anmelden, müssen sie wissen, welche Nachricht für sie im Falle von selective Repeat bestimmt ist (id = 0 -> multicast; id = 1 -> unicast auf id = 1)
+* Begriffe Serverseite: base - schaut in die Hinweisfolien, zum Pufferaufbau; nextSeq - die Sequenznummer, die als nächstes gesendet werden soll wird initialisiert mit 1, um semantische Integität zwischen Server und Client zu sichern.
